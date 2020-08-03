@@ -11,8 +11,16 @@ public class MommifierTest {
         this.mommifier = new Mommifier();
     }
     @Test
-    void should_return_origin_string_when_convert_given_normal_string() {
-        String result = mommifier.convert("12345");
+    void should_return_origin_string_when_convert_given_normal_strings() {
+        String result = mommifier.mommify("12345");
         assertEquals("12345", result);
+    }
+    @Test
+    void should_return_mommifier_string_when_convert_given_specific_strings(){
+        String result = mommifier.mommify("afei");
+        assertEquals("afemommyi", result);
+        result = mommifier.mommify("aeixxxei");
+        assertEquals("amommyemommyixxxemommyi", result);
+
     }
 }
