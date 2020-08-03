@@ -17,7 +17,10 @@ public class Mommifier {
      * @param originString the input string originString
      * @return the mommifier string
      */
-    public String mommify(String originString) {
+    public String mommify(String originString) throws Exception {
+        if (originString == null) {
+            throw new Exception();
+        }
         StringBuilder result = new StringBuilder();
         int vowelsCount = 0;
 
